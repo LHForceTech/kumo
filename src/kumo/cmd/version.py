@@ -1,4 +1,5 @@
 import typer
+
 from kumo.utils.constants import APP_VERSION
 
 version_app = typer.Typer(
@@ -18,5 +19,3 @@ def version_callback(ctx: typer.Context):
 
 def execute():
     typer.echo(f"Kumo CLI Version: {APP_VERSION}")
-    
-
