@@ -1,2 +1,3 @@
-# kumo
-Kumo Deploy - Ferramenta CLI para build, deploy em orquestradores de container
+# Kumo
+
+**Kumo Deploy** - Ferramenta _CLI_ para construção de imagem Docker através do processo de build da aplicação e posteriormente deploy em orquestradores de containers.
