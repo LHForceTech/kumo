@@ -1,8 +1,10 @@
 [tool.poetry]
-name = "kumo"
-version = "0.2.0"
+name = "kumo-cli"
+version = "0.2.1"
 description = "Ferramenta CLI para build e deploy em orquestradores de containers"
 authors = ["Diego Lopes <djkakaroto@gmail.com>"]
+repository = "https://github.com/LHForceTech/kumo"
+maintainers = ["LH Force Tech", "Diego Lopes <djkakaroto@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 packages = [{include = "kumo", from = "src"}]
