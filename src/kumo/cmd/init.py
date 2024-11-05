@@ -5,6 +5,7 @@ import yaml
 from jinja2 import Environment, FileSystemLoader
 
 from kumo.internal.logger import KumoLogger
+from kumo.utils.common import get_config_template_path
 
 logger = KumoLogger(__name__)
 
@@ -44,8 +45,12 @@ def config(
 
 
 def _write_config(stage: str = "", data: dict = {}):
+
+    # Obtém o path da lib instalada para compor o caminho completo do config.j2
+    config_template_path = get_config_template_path()
+
     # Configuração do ambiente Jinja2
-    env = Environment(loader=FileSystemLoader("src/kumo/template"))
+    env = Environment(loader=FileSystemLoader(config_template_path))
 
     # Carregando o template Jinja2
     template_name = "config.j2"

@@ -1,6 +1,7 @@
-# app_name: Usado para compor o nome da image/serviço dentro do orquestrador de container
-app_name: my-apps
+# service: Usado para compor o nome da image/serviço dentro do orquestrador de container
+service: my-apps
 
+# Local: docker.io/library/nginx:latest | registry_user/image_repo:tag
 image: user_registry/my-apps
 
 role:
@@ -20,7 +21,7 @@ role:
       - HOME_APP
 
 builder:
-  multiarch: true
+  multiarch: false
   dockerfile: "Dockerfile"
   context: "."
   versioning: "hash"
