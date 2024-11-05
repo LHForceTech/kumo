@@ -5,6 +5,7 @@ import typer
 from kumo.internal.builder import KumoBuilder
 from kumo.internal.config import KumoConfig
 from kumo.internal.logger import KumoLogger
+from kumo.utils.common import get_versioning
 
 logger = KumoLogger(__name__)
 
@@ -53,9 +54,10 @@ def config(
 
 
 def build(config_data):
+    tag = get_versioning(config_data)
     builder = KumoBuilder(
         dockerfile_path=config_data.builder.dockerfile,
-        image_tag=config_data.image,
+        image_tag=f"{config_data.image}:{tag}",
         multiarch=config_data.builder.multiarch,
     )
     builder.build_image(
