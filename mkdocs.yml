@@ -1,0 +1,12 @@
+site_name: 'Kumo CLI'
+theme:
+  name: 'material'
+nav:
+  - Home: index.md
+  - Service: service.md
+  - Config: config.md
+  - Image: image.md
+  - Builder: builder.md
+  - Role: role.md
+  - Registry: registry.md
+  - Proxy: proxy.md
